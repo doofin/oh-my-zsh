@@ -1,6 +1,12 @@
 <p align="center">
   <img src="https://s3.amazonaws.com/ohmyzsh/oh-my-zsh-logo.png" alt="Oh My Zsh">
 </p>
+## About this fork
+defalut plugins : git cabal archlinux idris
+
+theme : https://github.com/zakaziko99/agnosterzak-ohmyzsh-theme
+
+
 
 Oh My Zsh is an open source, community-driven framework for managing your [zsh](https://www.zsh.org/) configuration.
 
