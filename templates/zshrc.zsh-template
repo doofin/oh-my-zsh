@@ -64,6 +64,7 @@ plugins=(
   sbt
   idris
   archlinux
+  sudo
 )
 
 source $ZSH/oh-my-zsh.sh
