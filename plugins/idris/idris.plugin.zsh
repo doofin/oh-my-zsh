@@ -8,3 +8,4 @@
 alias idr='idris'
 alias idrb='idris --build'
 alias idri='idris --install'
+alias idrlspkg='idris --listlibs'
