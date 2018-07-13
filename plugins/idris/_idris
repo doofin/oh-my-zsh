@@ -16,4 +16,5 @@ _idris()
 
 complete -o filenames -F _idris idris
 
-return
+echo "idris load!"
+# return
