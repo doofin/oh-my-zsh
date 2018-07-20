@@ -20,7 +20,7 @@ _idris()
     COMPREPLY=( $(/usr/bin/idris "${CMDLINE[@]}") )
 }
 
-complete -o filenames -F _idris idris
+# complete -o filenames -F _idris idris
 
 alias idr='idris'
 alias idrb='idris --build'
