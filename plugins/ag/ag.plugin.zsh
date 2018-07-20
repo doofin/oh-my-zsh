@@ -1,0 +1,2 @@
+alias agf='ag -g'
+
