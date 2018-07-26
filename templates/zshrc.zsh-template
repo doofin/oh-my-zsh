@@ -100,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-powerline-daemon -q
-. /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
+# powerline-daemon -q
+# . /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 
 alias gcamp="ga . ; gcam '+' ; gp"
