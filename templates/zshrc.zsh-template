@@ -104,3 +104,4 @@ source $ZSH/oh-my-zsh.sh
 # . /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 
 alias gcamp="ga . ; gcam '+' ; gp"
+zstyle ":completion:*:commands" rehash 1
