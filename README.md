@@ -1,19 +1,12 @@
-<p align="center">
-  <img src="https://s3.amazonaws.com/ohmyzsh/oh-my-zsh-logo.png" alt="Oh My Zsh">
-</p>
+## About this fork
+defalut plugins : git cabal archlinux idris sudo
 
+theme : https://github.com/zakaziko99/agnosterzak-ohmyzsh-theme
 #### via wget
 
 ```shell
 sh -c "$(wget https://raw.githubusercontent.com/doofin/oh-my-zsh/master/tools/install.sh -O -)"
 ```
-
-
-## About this fork
-defalut plugins : git cabal archlinux idris sudo
-
-theme : https://github.com/zakaziko99/agnosterzak-ohmyzsh-theme
-
 ## Getting Started
 
 ### Prerequisites
