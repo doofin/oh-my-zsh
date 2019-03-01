@@ -2,6 +2,13 @@
   <img src="https://s3.amazonaws.com/ohmyzsh/oh-my-zsh-logo.png" alt="Oh My Zsh">
 </p>
 
+#### via wget
+
+```shell
+sh -c "$(wget https://raw.githubusercontent.com/doofin/oh-my-zsh/master/tools/install.sh -O -)"
+```
+
+
 ## About this fork
 defalut plugins : git cabal archlinux idris sudo
 
@@ -22,17 +29,9 @@ __Disclaimer:__ _Oh My Zsh works best on macOS and Linux._
 
 Oh My Zsh is installed by running one of the following commands in your terminal. You can install this via the command-line with either `curl` or `wget`.
 
-#### via curl
 
-```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/doofin/oh-my-zsh/master/tools/install.sh)"
-```
 
-#### via wget
 
-```shell
-sh -c "$(wget https://raw.githubusercontent.com/doofin/oh-my-zsh/master/tools/install.sh -O -)"
-```
 
 ## Using Oh My Zsh
 
