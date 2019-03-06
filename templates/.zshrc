@@ -3,18 +3,30 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnosterzak"
+plugins=(
+  git
+  cabal
+  sbt
+  idris
+  archlinux
+  sudo
+  zsh-autosuggestions
+  ag
+  ubuntu
+)
+
+source $ZSH/oh-my-zsh.sh
+alias gcamp="ga . ; gcam '+' ; gp"
+zstyle ":completion:*:commands" rehash 1
+DISABLE_AUTO_UPDATE="true"
+ENABLE_CORRECTION="true"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
 # cause zsh load theme from this variable instead of
 # looking in ~/.oh-my-zsh/themes/
 # An empty array have no effect
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -58,18 +70,6 @@ ZSH_THEME="agnosterzak"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-  cabal
-  sbt
-  idris
-  archlinux
-  sudo
-  zsh-autosuggestions
-  ag
-)
-
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -103,5 +103,3 @@ source $ZSH/oh-my-zsh.sh
 # powerline-daemon -q
 # . /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 
-alias gcamp="ga . ; gcam '+' ; gp"
-zstyle ":completion:*:commands" rehash 1
