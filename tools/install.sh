@@ -71,9 +71,10 @@ main() {
     mv ~/.zshrc ~/.zshrc.pre-oh-my-zsh;
   fi
 
-  printf "${BLUE}Using the Oh My Zsh template file and adding it to ~/.zshrc${NORMAL}\n"
+  echo "${BLUE}Using the Oh My Zsh template file and adding it to ~/.zshrc${NORMAL}\n"
   # cp "$ZSH"/templates/zshrc.zsh-template ~/.zshrc
   ln -s "$ZSH"/templates/.zshrc ~/.zshrc
+  ln -s "$ZSH"/templates/.screenrc ~/.screenrc
   sed "/^export ZSH=/ c\\
   export ZSH=\"$ZSH\"
   " ~/.zshrc > ~/.zshrc-omztemp
