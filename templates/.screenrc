@@ -14,6 +14,8 @@ defbce on
 # default windows
 screen -t Shell1  1 zsh
 screen -t Shell2  2 zsh
+screen -t Shell3  3 zsh
+screen -t Shell4  4 zsh
 select 0
 bind c screen 1 # window numbering starts at 1 not 0
 bind 0 select 10
