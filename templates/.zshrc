@@ -2,6 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
+# if got garbash character display ,config font/coding in your terminal preference!
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="agnosterzak"
 plugins=(

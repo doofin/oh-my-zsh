@@ -1,13 +1,14 @@
+```shell
+
+sh -c "$(wget https://raw.githubusercontent.com/doofin/oh-my-zsh/master/tools/install.sh -O -)"
+
+```
+
 ## About this fork
 defalut plugins : git cabal archlinux idris sudo
 
 theme : https://github.com/zakaziko99/agnosterzak-ohmyzsh-theme
 #### via wget
-
-```shell
-sh -c "$(wget https://raw.githubusercontent.com/doofin/oh-my-zsh/master/tools/install.sh -O -)"
-```
-## Getting Started
 
 ### Prerequisites
 
