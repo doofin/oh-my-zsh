@@ -1,0 +1,29 @@
+#hardstatus firstline 
+hardstatus alwayslastline
+hardstatus string '%{= kG}[%{G}%H%? %1`%?%{g}][%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%? %{-}%+w %=%{g}][%{B}%m/%d %{W}%C%A%{g}]'
+
+termcapinfo xterm* ti@:te@
+defscrollback 5000
+altscreen on
+startup_message off
+# mousetrack on
+# 256 colors
+attrcolor b ".I"
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defbce on
+# default windows
+screen -t Shell1  1 zsh
+screen -t Shell2  2 zsh
+select 0
+bind c screen 1 # window numbering starts at 1 not 0
+bind 0 select 10
+
+# navigating regions with Ctrl-arrows
+bindkey "^[[1;5D" focus left
+bindkey "^[[1;5C" focus right
+bindkey "^[[1;5A" focus up
+bindkey "^[[1;5B" focus down
+
+# switch windows with F3 (prev) and F4 (next)
+bindkey "^[OR" prev
+bindkey "^[OS" next
