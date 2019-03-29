@@ -14,7 +14,6 @@ plugins=(
   sudo
   zsh-autosuggestions
   ag
-  ubuntu
 )
 
 source $ZSH/oh-my-zsh.sh
