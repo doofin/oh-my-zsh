@@ -22,6 +22,40 @@ zstyle ":completion:*:commands" rehash 1
 DISABLE_AUTO_UPDATE="true"
 ENABLE_CORRECTION="true"
 
+# make danger cmds safer:
+# TERMINAL SAFETY SHIELDS (Prevents Accidental Data Deletion)
+
+# 1. Basic File Utilities: Prompt before overwriting or wiping data
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -I --preserve-root' # -I prompts only for 3+ files; protects root (/)
+
+
+# 3. Intercept and guard dangerous Git & Rsync actions
+git() {
+    # Guard against 'git reset --hard' wiping uncommitted work
+    if [[ "$1" == "reset" && "$*" == *"--hard"* ]]; then
+        echo "⚠️  WARNING: 'git reset --hard' will permanently wipe uncommitted code."
+        read -p "Are you absolutely sure you want to lose local changes? (y/n): " choice
+        [[ "$choice" != "y" ]] && { echo "❌ Reset canceled."; return 1; }
+    fi
+    command git "$@"
+}
+
+rsync() {
+    # Guard against 'rsync --delete' wiping out directories blindly
+    if [[ "$*" == *"--delete"* ]]; then
+        echo "⚠️  CRITICAL: Your command contains '--delete'."
+        echo "Running a safe --dry-run simulation first..."
+        echo "------------------------------------------------------------"
+        command rsync "$@" --dry-run
+        echo "------------------------------------------------------------"
+        read -p "Simulation finished. Execute the real sync? (y/n): " choice
+        [[ "$choice" != "y" ]] && { echo "❌ Aborted. No files were changed."; return 1; }
+    fi
+    command rsync "$@"
+}
+
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
 # cause zsh load theme from this variable instead of
